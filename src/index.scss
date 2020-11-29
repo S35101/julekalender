@@ -13,4 +13,9 @@ body {
   height: 100vh;
   font-size: 5vw;
   user-select: none;
+
+  @media (prefers-color-scheme: dark) {
+    background: #111;
+    color: white;
+  }
 }
