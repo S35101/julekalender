@@ -19,3 +19,37 @@ body {
     color: white;
   }
 }
+
+.gift {
+  animation: shake 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  transform-origin: center;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  50% {
+    transform: rotate(0deg);
+  }
+
+  55%,
+  95% {
+    transform: rotate(-1deg);
+  }
+
+  60%,
+  90% {
+    transform: rotate(1deg);
+  }
+
+  65%,
+  75%,
+  85% {
+    transform: rotate(-3deg);
+  }
+
+  70%,
+  80% {
+    transform: rotate(3deg);
+  }
+}

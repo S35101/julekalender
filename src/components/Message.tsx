@@ -1,4 +1,5 @@
 import { getDate, getMonth } from "date-fns";
+import { Gift } from "./Gift";
 
 enum Months {
   January,
@@ -21,13 +22,13 @@ export interface MessageProps {
 }
 
 export const Message = ({ date, names }: MessageProps) => {
-  const month = getMonth(date);
+  const month = getMonth(date) + 1;
 
   if (month !== Months.December) {
     return <span>Det er ikke desember... enda! 🎅🏻</span>;
   }
 
-  const day = getDate(date);
+  const day = getDate(date) - 10;
 
   if (day > 24) {
     return <span>God juleferie! 🎄</span>;
@@ -35,9 +36,5 @@ export const Message = ({ date, names }: MessageProps) => {
 
   const index = (day - 1) % names.length;
 
-  return (
-    <span>
-      {day}. {names[index]} 🎁
-    </span>
-  );
+  return <Gift name={names[index]} />;
 };
