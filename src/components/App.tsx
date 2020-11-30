@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
+import Snowfall from "react-snowfall";
 import { Message } from "./Message";
 
 const timeout = 1000 * 60;
@@ -12,8 +13,9 @@ export const App = () => {
   }, []);
 
   return (
-    <div>
+    <Fragment>
       <Message date={date} names={["Ludwig", "Kristian", "Markus"]} />
-    </div>
+      <Snowfall />
+    </Fragment>
   );
 };
