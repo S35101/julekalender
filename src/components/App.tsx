@@ -14,8 +14,8 @@ export const App = () => {
 
   return (
     <Fragment>
-      <Message date={date} names={["Ludwig", "Kristian", "Markus"]} />
       <Snowfall />
+      <Message date={date} names={["Ludwig", "Kristian", "Markus"]} />
     </Fragment>
   );
 };
