@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 
 export interface PresentProps {
+  day: number;
   name: string;
 }
 
-export const Gift = ({ name }: PresentProps) => {
+export const Gift = ({ day, name }: PresentProps) => {
   const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     setOpened(false);
-  }, [name]);
+  }, [day]);
 
   if (!opened) {
     return (

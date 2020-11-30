@@ -36,5 +36,5 @@ export const Message = ({ date, names }: MessageProps) => {
 
   const index = (day - 1) % names.length;
 
-  return <Gift name={names[index]} />;
+  return <Gift day={day} name={names[index]} />;
 };
