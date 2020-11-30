@@ -2,15 +2,20 @@ html {
   font-family: "Varela Round";
 }
 
+html,
 body {
-  margin: 0;
+  height: 100%;
+
+  @media (display-mode: standalone) {
+    height: 100vh;
+  }
 }
 
 body {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-size: 5vw;
   user-select: none;
 
