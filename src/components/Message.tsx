@@ -22,13 +22,13 @@ export interface MessageProps {
 }
 
 export const Message = ({ date, names }: MessageProps) => {
-  const month = getMonth(date) + 1;
+  const month = getMonth(date);
 
   if (month !== Months.December) {
     return <span>Det er ikke desember... enda! 🎅🏻</span>;
   }
 
-  const day = getDate(date) - 10;
+  const day = getDate(date);
 
   if (day > 24) {
     return <span>God juleferie! 🎄</span>;
